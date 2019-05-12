@@ -2,9 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+{% extends "base.html" %}
+{% block content %}
     <title></title>
   </head>
   <body>
-
+<form class="site-form" action="/accounts/signup/" method="post">
+    {% csrf_token %}
+    {{ form }}
+<input type="submit" value="Signup">
   </body>
+{% endblock %}
 </html>
