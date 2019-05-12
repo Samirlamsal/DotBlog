@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  <a href="/blog/"><img src="{% static 'images/titlelogo.gif' %}"/></a>
+  <form class="log-out" action="/blog/" method="post">
+    {% csrf_token %}
+  <button type="submit" style="float:right">Logout</button>
+    {% block content %}
+    {% endblock %}
+  </head>
+  <body>
+
+  </body>
+</html>

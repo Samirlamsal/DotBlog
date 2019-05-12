@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% extends "base.html" %}
+{% block content %}
+  <head>
+    <meta charset="utf-8">
+    <title>{{ material.title }}</title>
+  </head>
+  <body>
+    <div>
+      <h1>Running successfully</h1></br>
+      <h2>{{material.title}}</h2></br></br></br>
+      <hr/></br>
+
+
+        {{material.body}}</br>
+        Written by: {{ material.author }}</br>
+
+        </div>
+  </body>
+{% endblock %}
+</html>

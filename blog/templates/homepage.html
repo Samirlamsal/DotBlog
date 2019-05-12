@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% extends "base.html" %}
+{% block content %}
+  <head>
+    <meta charset="utf-8">
+    <title>Articles</title>
+  </head>
+  <body>
+    <b>Welcome</b><hr/><br/>
+    Here are the latest articles<br/><br/>
+    <div>
+      {% for articles in articles %}
+      <a href="{{ articles.id }}">
+          {{ articles.title }}--{{ articles.author }}<br>
+      </a>
+      {% endfor %}
+    </div>
+  </body>
+{% endblock %}
+</html>
