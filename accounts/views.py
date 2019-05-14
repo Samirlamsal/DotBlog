@@ -12,4 +12,4 @@ def signup_views(request):
             return redirect('blog:writings')
     else:
         form = UserCreationForm()
-    return render(request, 'signup.html', {'form':form})
+    return render(request, 'signup.htm', {'form':form})
