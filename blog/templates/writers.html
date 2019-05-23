@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+  <head>
+    <meta charset="utf-8">
+    <title>{{ lekhak.name }}</title>
+
+  </head>
+  <body>
+  <hr/>
+    {{ lekhak.image }}<br/>
+    <hr/>
+  Author---->  {{ lekhak.name }}<br/>
+  Bio----->    {{ lekhak.Bio }}<br/>
+  Articles------>  {{ lekhak.articles }}<br/>
+
+  </body>
+{% endblock %}
+
+</html>

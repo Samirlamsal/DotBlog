@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LOGIN</title>
+  </head>
+  <a href="/blog/"><img src="{% static 'images/titlelogo.gif' %}"/></a>
+  <body>
+
+    <form class="site-form" action="/accounts/login/" method="POST">
+      {% csrf_token %}
+      {{ form }}
+    <input type="submit" value ="Login">
+
+    </form>
+  </body>
+</html>

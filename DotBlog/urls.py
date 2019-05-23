@@ -24,7 +24,8 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('blog/', views.homepage, name='homepage'),
     path('blog/<int:id>/', views.writings, name='writings'),
-
+    path('authors/', views.authors, name='authors'),
+    path('authors/<int:id>/', views.Hall_of_fame, name='Hall_of_fame'),
 ]
 
 urlpatterns = urlpatterns + staticfiles_urlpatterns()
