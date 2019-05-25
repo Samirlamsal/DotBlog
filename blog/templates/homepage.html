@@ -1,21 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-{% extends "base.html" %}
+
 {% block content %}
   <head>
     <meta charset="utf-8">
     <title>Articles</title>
   </head>
-  <body>
-    <b>Welcome</b><hr/><br/>
-    Here are the latest articles<br/><br/>
-    <div>
-      {% for articles in articles %}
-      <a href="{{ articles.id }}">
-          {{ articles.title }}--{{ articles.author }}<br>
-      </a>
-      {% endfor %}
+  <style>
+   #middle{
+    position: relative;
+    left:10%;
+    padding: 10px;
+    border-radius:15px; border: 2px solid gray; width:40%; position: relative;
+
+  }
+  </style>
+  <body style="background-image: url('{% static "images/back4.jpg" %}');height:600px;";>  
+    <b>
+      
+      <div align="center">Welcome!</div></b><hr/><br/>
+    <h1>
+        Here are the latest articles
+    </h1><br/><br/>
+    <div id="middle">
+      <div>
+          {% for articles in articles %}
+          <a href="{{ articles.id }}">
+              {{ articles.title }}--{{ articles.author }}<br>
+          </a>
+          {% endfor %}
+      {% endblock %}
+      </div>
+      
+      
     </div>
   </body>
-{% endblock %}
+
 </html>

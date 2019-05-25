@@ -12,12 +12,3 @@ class Article(models.Model):
     def __str__(self):
         return self.title
 
-class Author(models.Model):
-    name = models.CharField(max_length=50)
-    articles = models.ForeignKey(Article, on_delete=models.CASCADE, default=None, related_name='articles')
-    image = models.ImageField(default='default.jpg',upload_to='profile_pics')
-    Bio = models.TextField()
-
-
-    def __str__(self):
-        return self.name

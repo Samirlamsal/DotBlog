@@ -4,15 +4,35 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script>
+        $('body').highlight("{{query_string}}");
+    </script>
 
-  <a href="/blog/"><img src="{% static 'images/titlelogo.gif' %}"/></a>
-  <form class="logout-link" action="/accounts/logout/" method="POST">
-    {% csrf_token %}
-  <button type="submit">Logout</button>
-    {% block content %}
-    {% endblock %}
+<a href="/blog/"><img src="{% static 'images/titlelogo.gif' %}"/></a>
+{% if user.is_authenticated %}
+             <li><form class="logout-link" action="/accounts/logout/" method="POST">
+               {% csrf_token %}
+             <button style='float:right' type="submit">Logout</button>
+             </li>
+             <button>
+             <a href="/blog/create">New Article</a>
+             </button>   
+{% else %}
+<div align='right'>
+  <button>
+  <a href="/accounts/login">Login</a>
+  </button>
+  <button>
+  <a href="/accounts/signup">Signup</a>
+</button>
+</div>
+
+{% endif %}
+
+  {% block content %}
+  {% endblock %}
   </head>
-  <body>
-
+  <body >
+    
   </body>
 </html>

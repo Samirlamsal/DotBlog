@@ -32,3 +32,4 @@ def logout_views(request):
     if request.method=='POST':
         logout(request)
         return redirect('/accounts/login/')
+

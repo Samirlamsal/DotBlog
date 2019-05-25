@@ -1,0 +1,12 @@
+<html>
+    <title>Search</title>
+    <body>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <form id="searchform" action="{{% request.get_host %}}/blog,search/" method="GET">
+            <input type="text" name="q" id="text"/>
+            <button type="button" onclick="searchform.submit()">
+            search
+            </button>
+        </form>
+    </body>
+</html>

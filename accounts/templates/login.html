@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -6,13 +7,69 @@
     <title>LOGIN</title>
   </head>
   <a href="/blog/"><img src="{% static 'images/titlelogo.gif' %}"/></a>
-  <body>
+  <body style="background-image: url('{% static "images/back4.jpg" %}');height:600px;";>
+      <style>
+          #middle {
+            position: relative;
+            padding :10Px;
+            top :40%;
+            left :30%;
+          }
+          .button {
+  display: inline-block;
+  border-radius: 2px;
+  background-color: #011e25;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 3px;
+}
 
-    <form class="site-form" action="/accounts/login/" method="POST">
-      {% csrf_token %}
-      {{ form }}
-    <input type="submit" value ="Login">
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
 
-    </form>
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+          </style>
+    <div id='middle' style="border-radius:15px ;border:2px solid black; position: absolute; height: 22% width= 20%;"> 
+        <form class="site-form" action="/accounts/login/" method="POST">
+          {% csrf_token %}
+          {{ form.as_p}}
+          {% if request.GET.next %}
+          <input type="hidden" name="next" value="{{ request.GET.next }}">
+         {% endif %}
+         <input type="submit" value ="Login">
+        </form>
+         <hr>
+        <h3>Need a account?<a href="{% url 'accounts:signup' %}"><button class='button'><span>Signup</span> </button></a>
+        </h3>
+        
+      
+    </div>
+    
   </body>
 </html>

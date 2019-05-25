@@ -1,0 +1,33 @@
+{% load static %}
+<a href="/blog/"><img src="{% static 'images/titlelogo.gif' %}"/></a>
+<hr>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Add-Article</title>
+  </head>
+  <style>
+  #middle{
+    position: relative;
+    top:20%;
+    left:20%;
+    padding: 10px;
+    border-radius:15px; border: 2px solid gray; width:40%; position: relative;
+
+  }
+  </style>
+  <body style="background-image: url('{% static "images/back4.jpg" %}');height:600px; position:absolute;">
+      <h1>Add an fucking awesome article here</h1>
+      <hr size="2", color="brown">
+    <div id="middle">
+        
+        <form class="site-form" action="/blog/create" method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+        <input type="submit" value="Create">
+        </form>
+    </div>
+    
+  </body>
+</html>

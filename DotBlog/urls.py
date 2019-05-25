@@ -24,8 +24,12 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('blog/', views.homepage, name='homepage'),
     path('blog/<int:id>/', views.writings, name='writings'),
-    path('authors/', views.authors, name='authors'),
-    path('authors/<int:id>/', views.Hall_of_fame, name='Hall_of_fame'),
+    path('', views.home, name='home'),
+    path('aboutus/', views.aboutus, name="aboutus"),
+    path('privacy-policy', views.privacy,name="privacy"),
+    path('faq',views.faq, name="faq"),
+   #path('blog/search/', views.search, name='search'),
+   path('blog/create', views.create_blog, name='create_blog'),
 ]
 
 urlpatterns = urlpatterns + staticfiles_urlpatterns()

@@ -2,11 +2,65 @@
 
     <title>SIGNUP</title>
   </head>
-  <body>
+  <body style="background-image: url('{% static "images/back4.jpg" %}') ;100%";>
+    <style>
+    #middle {
+      position: relative;
+      padding : 10Px;
+      top : 30%;
+      left : 18%;
+    }
+  .button {
+  display: inline-block;
+  border-radius: 2px;
+  background-color: #052ee2;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 3px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+    </style>
+    
 <a href="/blog/"><img src="{% static 'images/titlelogo.gif' %}"/></a>
+<div id='middle' style="border-radius: 25px ;border:3px solid gray; position: relative;top:14%;width:58%;height:65%;">
+  {% load crispy_forms_tags %}
 <form class="site-form" action="/accounts/signup/" method="POST">
     {% csrf_token %}
-    {{ form }}
+    {{ form|crispy }}
 <input type="submit" value="Signup">
 </form>
+<hr>
+<h3> Already a member? <a href="{% url 'accounts:login' %}"><button class='button'><span>Login</span> </button> </a></h3>
+</div>
+
   </body>
