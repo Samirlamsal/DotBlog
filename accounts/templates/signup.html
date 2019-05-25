@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-{% extends "base.html" %}
-{% block content %}
-    <title></title>
+{% load static %}
+
+    <title>SIGNUP</title>
   </head>
   <body>
-<form class="site-form" action="/accounts/signup/" method="post">
+<a href="/blog/"><img src="{% static 'images/titlelogo.gif' %}"/></a>
+<form class="site-form" action="/accounts/signup/" method="POST">
     {% csrf_token %}
     {{ form }}
 <input type="submit" value="Signup">
+</form>
   </body>
-{% endblock %}
-</html>

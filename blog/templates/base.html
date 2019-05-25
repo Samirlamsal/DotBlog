@@ -6,9 +6,9 @@
     <title></title>
 
   <a href="/blog/"><img src="{% static 'images/titlelogo.gif' %}"/></a>
-  <form class="log-out" action="/blog/" method="post">
+  <form class="logout-link" action="/accounts/logout/" method="POST">
     {% csrf_token %}
-  <button type="submit" style="float:right">Logout</button>
+  <button type="submit">Logout</button>
     {% block content %}
     {% endblock %}
   </head>

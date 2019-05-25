@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% extends "base.html" %}
+{% block content %}
+  <head>
+    <meta charset="utf-8">
+    <title>Authors</title>
+
+
+  </head>
+  <body>
+    <h1>Hall Of Fame</h1>
+    {% for writers in writers %}
+    <a href="{{ writers.id }}">{{ writers.name }}<a/><br>
+    {% endfor %}
+
+  </body>
+  {% endblock %}
+</html>
