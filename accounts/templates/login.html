@@ -1,8 +1,8 @@
 {% load static %}
-{% load crispy_forms_tags %}
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+  <head><link rel="stylesheet" href="{% static 'css/all.css' %}">
     <meta charset="utf-8">
     <title>LOGIN</title>
   </head>
@@ -70,6 +70,15 @@
         
       
     </div>
-    
+    <div style="border: thin 2px; bottom:-500px; position: relative; ">
+        <div align="center" id="footer"> 
+            <a href="{% url 'aboutus' %}">About Us</a>
+            <a href="{% url 'privacy' %}">Privacy Policy</a>
+            
+            <a href="{% url 'faq' %}">FAQ</a>
+          
+        </div>
+    <footer style="font-size: 28px; color:red; text-align: center">An ICES Project!</footer>
+    </div>
   </body>
 </html>

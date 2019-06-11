@@ -1,0 +1,51 @@
+#footer a{
+    padding:20px;
+    font-stretch: semi-expanded;
+    color: rgb(67, 170, 7);
+    font-size: 20;
+}
+#middle a:hover{
+    width:150%;
+    height:150%;
+}
+#signup a , #login a{
+   position:absolute;
+   top:45%;
+   padding:10px;
+   background-color: rgb(228, 220, 220);
+   border:3px solid rgb(6, 104, 31);
+   text-decoration: none;
+   
+}
+#signup a:hover, #login a:hover{
+    box-shadow: 5px 5px 20px rgb(114, 7, 7);
+    background-color: rgb(228, 220, 220);
+}
+
+#signup a{         
+   left:30%;
+   }
+#login a{
+   left:65%;
+}
+#login:before{
+   color: rgb(20, 20, 20);
+   color: goldenrod;
+   content:"Already have account?";
+   position:absolute;
+   top:35%;
+   left:60%;
+   font-size: 25;
+}
+#signup:before{
+   color:goldenrod;
+
+   content:"Need account?";
+   position:absolute;
+   top:35%;
+   left:25%;
+   font-size:25;
+}
+#s {
+    background-color:rgb(184, 187, 161);
+}

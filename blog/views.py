@@ -26,10 +26,11 @@ def aboutus(request):
     return render(request, 'about_us.html')
 
 def privacy (request):
-    return render(request, 'privacy_policy.html')
+    return render(request, 'privacy.html')
 
 def faq (request):
     return render(request, 'faq.html')
+
 
 """def search(request):
     query_string = ''
