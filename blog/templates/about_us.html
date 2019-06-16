@@ -33,6 +33,7 @@
     <title>About Us</title>
         {% load static %}
     </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     body{
         background-color: azure;
@@ -59,10 +60,42 @@
         margin: 3%;
         padding: 3%;
     }
+    .fa{
+    padding: 8px;
+    font-size: 20px;
+    text-align: center;
+    border: 3px solid goldenrod;
+    border-radius: 50%;
+    color: white;
+    width: 20px;
+}
+#social_links{
+    border: 3px;
+    
+   top:30px;
+    position: relative;
+    
+}
+.fa-facebook{
+    background: #3B5998;
+}
+.fa-twitter{
+    background:  #55ACEE;
+}
+.fa-instagram{
+    background: #b25c4a;
+;
+}
+.fa-github{
+    background: #3B5998;
+}
+.fa-linkedin{
+    background: #007bb5;
+}
    
     </style>
     <body>
-        <h1 style="text-align: center">Team striking keyboard keys!</h1>
+        <h1 style="text-align: center">Our Team</h1>
         <span class="team">
         <div class="sameer">
                 <img src="{% static "images/sameer.jpg" %}" alt="Sameer Lamsal" height="260px" width="260px" />
@@ -71,6 +104,13 @@
                 <p style="color: black">
                         Hi! I am Samir Lamsal, Currently studying bachelor of electronics, communication and information technology.
                 </p>
+                <span id="social_links">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-github"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+            </span>
             </div>
                 <div class="Bibek">
                 <img src="{% static "images/myy.jpg" %}" alt="Bibek Chalise" height="260px" width="260px" />
@@ -81,6 +121,13 @@
                 <p style="color: black">
                         Hi! I am Bibek Chalise, currently studying bachelor of Computer Engineering.
                     </p>
+                    <span id="social_links">
+                        <a href="https://www.facebook.com/IamBbek" class="fa fa-facebook"></a>
+                        <a href="https://twitter.com/I_am_Bbek" class="fa fa-twitter"></a>
+                        <a href="https://www.linkedin.com/in/bibek-chalise-235380142/" class="fa fa-linkedin"></a>
+                        <a href="https://github.com/bibekebib" class="fa fa-github"></a>
+                        <a href="https://www.instagram.com/im_bbek/" class="fa fa-instagram"></a>
+                </span>
         </div>
     </span>
     <div align="center" id="footer"> 
