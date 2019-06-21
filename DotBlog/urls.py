@@ -28,7 +28,7 @@ urlpatterns = [
     path('aboutus/', views.aboutus, name="aboutus"),
     path('privacy-policy', views.privacy,name="privacy"),
     path('faq',views.faq, name="faq"),
-   #path('blog/search/', views.search, name='search'),
+    path('authors/', views.authors, name = 'authors'),
    path('blog/create', views.create_blog, name='create_blog'),
 ]
 

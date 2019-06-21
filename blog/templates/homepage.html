@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <title>Blogs</title>
   </head>
- 
+
   <style>
    #middle{
     position: relative;
@@ -18,24 +18,31 @@
 
   }
   </style>
-  <body style="background-image: url('{% static "images/back4.jpg" %}');height:600px;";>  
+  <body style="background-image: url('{% static "images/back4.jpg" %}');height:600px;";>
     <b>
-      
+
       <div align="center">Welcome!</div></b><hr/><br/>
     <h1>
-        Here are the latest articles
-    </h1><br/><br/>
+            Login to add a new Blog    </h1><br/><br/>
+   <div id ="middle">
+     <h2>Take a look at our authors</h2>
+     <a href="/authors/">Authors</a>
+   </div>
     <div id="middle">
+     <h2>Recent Blogs</h2><br><br>
       <div>
           {% for articles in articles %}
           <a href="{{ articles.id }}">
-              {{ articles.title }}--{{ articles.author }}<br>
+              {{ articles.title }}   <pre>-{{ articles.author }}</pre><br><br>
           </a>
           {% endfor %}
+
+      <a href="/authors/"
+
       {% endblock %}
       </div>
-      
-      
+
+
     </div>
   </body>
 

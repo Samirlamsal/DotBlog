@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+  <head><link rel="stylesheet" href="{% static 'css/all.css' %}">
     <meta charset="utf-8">
     <title></title>
     <script>
@@ -16,7 +16,7 @@
              </li>
              <button>
              <a href="/blog/create">New Article</a>
-             </button>   
+             </button>
 {% else %}
 <div align='right'>
   <button>
@@ -28,11 +28,18 @@
 </div>
 
 {% endif %}
+<div align="center" id="footer">
+    <a href="{% url 'aboutus' %}">About Us</a>
+    <a href="{% url 'privacy' %}">Privacy Policy</a>
+
+    <a href="{% url 'faq' %}">FAQ</a>
+
+</div>
 
   {% block content %}
   {% endblock %}
   </head>
   <body >
-    
+
   </body>
 </html>

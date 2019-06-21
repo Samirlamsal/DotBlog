@@ -31,6 +31,15 @@ def privacy (request):
 def faq (request):
     return render(request, 'faq.html')
 
+def authors(request):
+    author = Article.objects.all()
+    return render(request, 'authors.html', {'author':author})
+
+def author_detail(request, id):
+    detail = Article
+
+
+
 
 """def search(request):
     query_string = ''
